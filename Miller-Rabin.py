@@ -7,13 +7,12 @@ def getNumbers():
 	while x % 2 == 0:
 		x = x/2
 		s = s+1
-	d = int((n-1)/pow(2,s))
+	d = int(x)
 	return {'n': n, 'd': d, 's': s}
 
 def testPrime(a, **nums):
 	for i in range(0,nums['s']):
-		test = pow(a,(pow(2,i) * nums['d']),nums['n'])
-		if test in (1, nums['n']-1):
+		if pow(a,(pow(2,i) * nums['d']),nums['n']) in (1, nums['n']-1):
 			return 0
 			break
 	return 1
